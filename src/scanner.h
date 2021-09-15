@@ -50,7 +50,7 @@ typedef enum {
 
   // Extra
   TOKEN_ERROR,
-  TOKEN_EOF
+  TOKEN_EOF,
 } TokenType;
 
 typedef struct {
