@@ -28,12 +28,12 @@ static Entry* findEntry(Entry* entries, int capacity, ObjString* key) {
     Entry* entry = &entries[index];
 
     if (entry->key == NULL) {
-      if (IS_NIL(entry->value)) {  // Empty entry
+      if (IS_NIL(entry->value)) {  // Empty entry.
         return tombstone != NULL ? tombstone : entry;
-      } else {  // We found a tombstone
+      } else {  // We found a tombstone.
         if (tombstone == NULL) tombstone = entry;
       }
-    } else if (entry->key == key) {  // We found the key
+    } else if (entry->key == key) {  // We found the key.
       return entry;
     }
 
@@ -95,7 +95,7 @@ bool tableDelete(Table* table, ObjString* key) {
   Entry* entry = findEntry(table->entries, table->capacity, key);
   if (entry->key == NULL) return false;
 
-  // Place a tombstone in the entry
+  // Place a tombstone in the entry.
   entry->key = NULL;
   entry->value = BOOL_VAL(true);
   return true;
@@ -117,10 +117,10 @@ ObjString* tableFindString(Table* table, const char* chars, int length,
   uint32_t index = hash % table->capacity;
   for (;;) {
     Entry* entry = &table->entries[index];
-    if (entry->key == NULL) {  // Stop if we find an empty non-tombstone entry
+    if (entry->key == NULL) {  // Stop if we find an empty non-tombstone entry.
       if (IS_NIL(entry->value)) return NULL;
     } else if (entry->key->length == length && entry->key->hash == hash &&
-               memcmp(entry->key->chars, chars, length) == 0) {  // We Found it
+               memcmp(entry->key->chars, chars, length) == 0) {  // We Found it.
       return entry->key;
     }
 

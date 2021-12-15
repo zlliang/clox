@@ -2,7 +2,7 @@
 #define _CLOX_SCANNER_H_
 
 typedef enum {
-  // Single-character tokens
+  // Single-character tokens.
   TOKEN_LEFT_PAREN,
   TOKEN_RIGHT_PAREN,
   TOKEN_LEFT_BRACE,
@@ -15,7 +15,7 @@ typedef enum {
   TOKEN_SLASH,
   TOKEN_STAR,
 
-  // One or two character tokens
+  // One or two character tokens.
   TOKEN_BANG,
   TOKEN_BANG_EQUAL,
   TOKEN_EQUAL,
@@ -25,12 +25,12 @@ typedef enum {
   TOKEN_LESS,
   TOKEN_LESS_EQUAL,
 
-  // Literals
+  // Literals.
   TOKEN_IDENTIFIER,
   TOKEN_STRING,
   TOKEN_NUMBER,
 
-  // Keywords
+  // Keywords.
   TOKEN_AND,
   TOKEN_CLASS,
   TOKEN_ELSE,
@@ -48,7 +48,7 @@ typedef enum {
   TOKEN_VAR,
   TOKEN_WHILE,
 
-  // Extra
+  // Extra.
   TOKEN_ERROR,
   TOKEN_EOF,
 } TokenType;

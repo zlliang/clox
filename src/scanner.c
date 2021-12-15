@@ -158,9 +158,9 @@ static Token identifier() {
 static Token number() {
   while (isDigit(peek())) advance();
 
-  // Look for a fractional part
+  // Look for a fractional part.
   if (peek() == '.' && isDigit(peekNext())) {
-    advance();  // Consume the "."
+    advance();  // Consume the ".".
 
     while (isDigit(peek())) advance();
   }
@@ -176,7 +176,7 @@ static Token string() {
 
   if (isAtEnd()) return errorToken("Unterminated string.");
 
-  advance();  // The closing quote
+  advance();  // The closing quote.
   return makeToken(TOKEN_STRING);
 }
 
