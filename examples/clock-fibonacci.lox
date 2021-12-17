@@ -8,4 +8,5 @@ print fib(35);
 var after = clock();
 print after - before;
 
-// On my laptop, TSLox uses about 50 seconds to execute this.
+// On my laptop, TSLox uses about 50 seconds to execute this;
+// Now, CLox uses 4.3 seconds.
