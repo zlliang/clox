@@ -9,7 +9,7 @@ Lox is a tiny scripting language described in [Bob Nystrom](https://stuffwithstu
 First build this project. Here we use CMake:
 
 ```bash
-$ mkdir build && cd build  # Create a build directory for CMake
+$ mkdir build && cd build  # Create a CMake workspace
 $ cmake .. && make
 $ ./clox  # Start CLox
 ```
