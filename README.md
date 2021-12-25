@@ -21,7 +21,7 @@ $ ./clox ../examples/hello-world.lox
 Hello, world!
 ```
 
-## What's next
+## What's Next
 
 By the end of 2021, I complete reading [Crafting Interpreters](https://craftinginterpreters.com/) and implement two interpreters of the Lox scripting language, in TypeScript and C respectively. I get some knowledge about creating programming languages, and it feels great! Next I may play with some toy languages, learn more optimization tricks and investigate different language features. Hope I can make some "real" production one day. ;)
 
